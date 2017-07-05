@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>::TAB::</title>
+<style>
+  ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: inline-block;
+}
+ul li {
+  list-style: none;
+  float: left;
+}
+ul li a {
+  color: #FFF;
+  background: #333;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+.hideme {
+  display: none;
+}
+
+.tabcontainer {
+  width: 100%;
+}
+.tabcontainer .tab {
+  position: absolute;
+  display: none;
+}
+
+/* set the first link's background and show its div on page load */
+ul li:first-child a,
+.tab:first-child {
+  background: #638DB2;
+  display: block;
+}
+
+/* reset the first link's background and hide its div when a hash tag exist */
+:target ~ ul [href="#tab1"] {
+  background: black;
+}
+:target ~ .tabcontainer #tab1div {
+  display: none;
+}
+
+/* set the hashed/targeted link's background and show its div */
+#tab1:target ~ ul [href="#tab1"],
+#tab1:target ~ .tabcontainer #tab1div {
+  background: #638DB2;
+  display: block;
+}
+#tab2:target ~ ul [href="#tab2"],
+#tab2:target ~ .tabcontainer #tab2div {
+  background: #FF4C43;
+  display: block;
+}
+#tab3:target ~ ul [href="#tab3"],
+#tab3:target ~ .tabcontainer #tab3div {
+  background: #C1CC14;
+  display: block;
+}
+#tab4:target ~ ul [href="#tab4"],
+#tab4:target ~ .tabcontainer #tab4div {
+  background: #ADB257;
+  display: block;
+}
+</style>
+</head>
+<body>
+<span id="tab1" class="hideme"></span>
+<span id="tab2" class="hideme"></span>
+<span id="tab3" class="hideme"></span>
+<span id="tab4" class="hideme"></span>
+<ul>
+  <li><a href="#tab1">Tab 1</a></li>
+  <li><a href="#tab2">Tab 2</a></li>
+  <li><a href="#tab3">Tab 3</a></li>
+  <li><a href="#tab4">Tab 4</a></li>
+</ul>
+<div class="tabcontainer">
+  <div id="tab1div" class="tab">
+    1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  <div id="tab2div" class="tab">
+    2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  <div id="tab3div" class="tab">
+    3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  <div id="tab4div" class="tab">
+    hgjfjh4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div>
+</body>
+
+</html>
